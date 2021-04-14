@@ -1,0 +1,11 @@
+@mixin restaurant-titre {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+@mixin width-marg {
+  width: 90%;
+  margin: auto;
+}
+@mixin box-shadow {
+  box-shadow: 3px 10px 15px #d4d4d4;
+}

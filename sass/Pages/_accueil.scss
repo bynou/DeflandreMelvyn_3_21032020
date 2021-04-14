@@ -1,0 +1,275 @@
+.header_figure {
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 3px 3px 3px rgb(235, 235, 235);
+}
+.header_localisation {
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(235, 235, 235);
+  color: rgb(60, 60, 60);
+  font-size: 1.2em;
+  text-align: center;
+  height: initial;
+
+  &_txt {
+    margin-left: 15px;
+    font-weight: bold;
+  }
+}
+.header_explo {
+  width: 100%;
+  padding: 50px;
+  background-color: rgb(246, 246, 246);
+  text-align: center;
+  &_title {
+    font-weight: bold;
+    font-size: $font-size-title;
+  }
+  &_txt {
+    margin-top: 15px;
+  }
+  &_button {
+    background-color: $color-primary;
+    color: white;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.1em;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.nav {
+  width: 95%;
+  margin: auto;
+  margin-top: 45px;
+  padding-bottom: 35px;
+  &_h1 {
+    @include width-marg;
+    font-weight: bold;
+    font-size: $font-size-title;
+  }
+  &_ul {
+    list-style: none;
+    line-height: 80px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    &_li {
+      margin: 20px;
+
+      &_button {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 15px;
+        border: none;
+        font-size: larger;
+        @include box-shadow;
+        position: relative;
+        z-index: 1;
+        &_content {
+          display: flex;
+
+          &_vignette {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background: $color-primary;
+            position: absolute;
+            left: -10px;
+            color: white;
+            font-size: 0.9em;
+            &_txt {
+              margin-left: 25px;
+            }
+          }
+        }
+        &:hover {
+          outline-style: none;
+          i {
+            color: $color-primary;
+          }
+          &::after {
+            opacity: 1;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: lighten($color: $color-primary, $amount: 30);
+          opacity: 0;
+          z-index: -1;
+          transition: opacity 250ms;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "roboto", serif;
+  margin: 0;
+}
+main {
+  background: rgb(246, 246, 246);
+}
+.restaurant {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &_title {
+    @include width-marg;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: $font-size-title;
+  }
+  &_panneau {
+    background-color: rgb(255, 255, 255);
+    @include width-marg;
+    box-shadow: 3px 3px 3px #ebebeb;
+    border-radius: 15px 15px 15px 15px;
+    margin-bottom: 15px;
+    &_ref {
+      display: flex;
+      justify-content: space-between;
+      border-radius: 0 0 15px 15px;
+      margin: auto;
+      width: 95%;
+      &_heart {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        background-color: $color-primary;
+        transform: rotate(45deg);
+        margin-top: 25px;
+        margin-right: 15px;
+        &::before {
+          position: absolute;
+          bottom: 0px;
+          left: -8px;
+          width: 15px;
+          height: 15px;
+          content: "";
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          background-color: $color-primary;
+        }
+        &::after {
+          position: absolute;
+          top: -8px;
+          right: 0px;
+          width: 15px;
+          height: 15px;
+          content: "";
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          background-color: $color-primary;
+        }
+      }
+      &_txt {
+        margin: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        &_titre {
+          margin: 0;
+          font-size: 1em;
+          @include restaurant-titre;
+        }
+      }
+    }
+    &_img {
+      width: 100%;
+      height: 170px;
+      position: relative;
+      &_new {
+        background-color: $color-Tertiary;
+        display: inline;
+        padding: 7px 10px 7px 10px;
+        font-size: 0.9em;
+        color: green;
+        font-weight: 600;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
+      &_vignette {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+      }
+    }
+  }
+}
+.footer {
+  color: white;
+  background-color: rgb(50, 50, 50);
+  &_title {
+    font-family: "shrikhand", serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include width-marg;
+  }
+  &_ul {
+    list-style: none;
+    line-height: 1.8em;
+    @include width-marg;
+    &_li {
+      &_lien {
+        text-decoration: none;
+        color: white;
+        &:visited {
+          text-decoration: none;
+          color: white;
+        }
+        &_txt_1 {
+          margin-left: 15px;
+        }
+        &_txt_2 {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+.test_heart {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  &:hover {
+    color: $color-primary;
+    & .test_heart_1 {
+      opacity: 1;
+    }
+  }
+}
+.test_heart_1 {
+  color: $color-primary;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 3000ms;
+}

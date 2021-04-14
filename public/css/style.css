@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "shrikhand";
+  src: url("../../police/shrikhand/Shrikhand-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../police/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../police/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../police/roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+.header_figure {
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 3px 3px 3px #ebebeb;
+}
+
+.header_localisation {
+  width: 100%;
+  padding: 15px;
+  background-color: #ebebeb;
+  color: #3c3c3c;
+  font-size: 1.2em;
+  text-align: center;
+  height: initial;
+}
+.header_localisation_txt {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.header_explo {
+  width: 100%;
+  padding: 50px;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.header_explo_title {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+.header_explo_txt {
+  margin-top: 15px;
+}
+.header_explo_button {
+  background-color: #9356dc;
+  color: white;
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1.1em;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav {
+  width: 95%;
+  margin: auto;
+  margin-top: 45px;
+  padding-bottom: 35px;
+}
+.nav_h1 {
+  width: 90%;
+  margin: auto;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+.nav_ul {
+  list-style: none;
+  line-height: 80px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.nav_ul_li {
+  margin: 20px;
+}
+.nav_ul_li_button {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+  border: none;
+  font-size: larger;
+  box-shadow: 3px 10px 15px #d4d4d4;
+  position: relative;
+  z-index: 1;
+}
+.nav_ul_li_button_content {
+  display: flex;
+}
+.nav_ul_li_button_content_vignette {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #9356dc;
+  position: absolute;
+  left: -10px;
+  color: white;
+  font-size: 0.9em;
+}
+.nav_ul_li_button_content_vignette_txt {
+  margin-left: 25px;
+}
+.nav_ul_li_button:hover {
+  outline-style: none;
+}
+.nav_ul_li_button:hover i {
+  color: #9356dc;
+}
+.nav_ul_li_button:hover::after {
+  opacity: 1;
+}
+.nav_ul_li_button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4d5f6;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto", serif;
+  margin: 0;
+}
+
+main {
+  background: #f6f6f6;
+}
+
+.restaurant {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.restaurant_title {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+.restaurant_panneau {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  box-shadow: 3px 3px 3px #ebebeb;
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: 15px;
+}
+.restaurant_panneau_ref {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 15px 15px;
+  margin: auto;
+  width: 95%;
+}
+.restaurant_panneau_ref_heart {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: #9356dc;
+  transform: rotate(45deg);
+  margin-top: 25px;
+  margin-right: 15px;
+}
+.restaurant_panneau_ref_heart::before {
+  position: absolute;
+  bottom: 0px;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #9356dc;
+}
+.restaurant_panneau_ref_heart::after {
+  position: absolute;
+  top: -8px;
+  right: 0px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #9356dc;
+}
+.restaurant_panneau_ref_txt {
+  margin: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.restaurant_panneau_ref_txt_titre {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.restaurant_panneau_img {
+  width: 100%;
+  height: 170px;
+  position: relative;
+}
+.restaurant_panneau_img_new {
+  background-color: #99e2d0;
+  display: inline;
+  padding: 7px 10px 7px 10px;
+  font-size: 0.9em;
+  color: green;
+  font-weight: 600;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.restaurant_panneau_img_vignette {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.footer {
+  color: white;
+  background-color: #323232;
+}
+.footer_title {
+  font-family: "shrikhand", serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90%;
+  margin: auto;
+}
+.footer_ul {
+  list-style: none;
+  line-height: 1.8em;
+  width: 90%;
+  margin: auto;
+}
+.footer_ul_li_lien {
+  text-decoration: none;
+  color: white;
+}
+.footer_ul_li_lien:visited {
+  text-decoration: none;
+  color: white;
+}
+.footer_ul_li_lien_txt_1 {
+  margin-left: 15px;
+}
+.footer_ul_li_lien_txt_2 {
+  margin-left: 10px;
+}
+
+.test_heart {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.test_heart:hover {
+  color: #9356dc;
+}
+.test_heart:hover .test_heart_1 {
+  opacity: 1;
+}
+
+.test_heart_1 {
+  color: #9356dc;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 3000ms;
+}
+
+/*# sourceMappingURL=style.css.map */
