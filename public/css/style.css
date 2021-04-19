@@ -22,6 +22,10 @@
   font-weight: lighter;
   font-style: normal;
 }
+.header {
+  background-color: white;
+}
+
 .header_figure {
   width: 100%;
   margin: auto;
@@ -29,7 +33,9 @@
   padding: 15px;
   background-color: white;
   text-align: center;
-  box-shadow: 3px 3px 3px #ebebeb;
+  box-shadow: 3px 3px 3px #c3bebe;
+  z-index: 2;
+  position: relative;
 }
 
 .header_localisation {
@@ -60,7 +66,6 @@
   margin-top: 15px;
 }
 .header_explo_button {
-  background-color: #9356dc;
   color: white;
   margin-top: 25px;
   padding: 15px;
@@ -69,6 +74,7 @@
   font-size: 1.1em;
   padding-left: 20px;
   padding-right: 20px;
+  background: linear-gradient(165deg, #ff79da, #9356dc);
 }
 
 .nav {
@@ -121,6 +127,19 @@
 }
 .nav_ul_li_button_content_vignette_txt {
   margin-left: 25px;
+}
+.nav_ul_li_button:focus {
+  outline: 0;
+}
+.nav_ul_li_button:focus i {
+  color: #9356dc;
+}
+.nav_ul_li_button:focus::after {
+  opacity: 1;
+}
+.nav_ul_li_button:active {
+  outline: none;
+  border: none;
 }
 .nav_ul_li_button:hover {
   outline-style: none;
@@ -285,28 +304,154 @@ main {
   margin-left: 10px;
 }
 
-.test_heart {
+.icon_heart {
   position: relative;
+  border: none;
+  background-color: transparent;
+}
+.icon_heart:hover .icon_heart_1 {
+  opacity: 0;
+  z-index: -1;
+}
+.icon_heart:hover .icon_heart_2 {
+  opacity: 1;
   z-index: 1;
+}
+.icon_heart:focus {
+  outline: 0;
+}
+.icon_heart:focus .icon_heart_1 {
+  opacity: 0;
+  z-index: -1;
+}
+.icon_heart:focus .icon_heart_2 {
   opacity: 1;
+  z-index: 1;
 }
-.test_heart:hover {
-  color: #9356dc;
+.icon_heart_1 {
+  font-size: 1.5em;
+  z-index: 1;
 }
-.test_heart:hover .test_heart_1 {
-  opacity: 1;
-}
-
-.test_heart_1 {
-  color: #9356dc;
+.icon_heart_2 {
+  font-size: 1.5em;
+  background: linear-gradient(0deg, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   position: absolute;
-  top: 0;
+  top: 22px;
   right: 0;
   bottom: 0;
   left: 0;
   opacity: 0;
   z-index: -1;
-  transition: opacity 3000ms;
+  transition: opacity 5s;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  animation: test 3s;
+  animation-direction: reverse;
+}
+.loader_anim {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #9356dc;
+  -webkit-animation: spin 2s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+.loader_anim::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #ff79da;
+  -webkit-animation: spin 3s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+.loader_anim::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #99e2d0;
+  -webkit-animation: spin 1.5s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1.5s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@keyframes test {
+  from {
+    z-index: -1000;
+    display: none;
+  }
+  to {
+    z-index: 1000;
+    display: block;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
