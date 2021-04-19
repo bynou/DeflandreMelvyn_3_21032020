@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "shrikhand";
+  src: url("polices/Shrikhand/Shrikhand-Regular.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("polices/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  font-family: "shrikhand";
+}
+.header__h1 {
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
