@@ -62,6 +62,16 @@
     display: block;
   }
 }
+@-webkit-keyframes test {
+  from {
+    z-index: -1000;
+    display: none;
+  }
+  to {
+    z-index: 1000;
+    display: block;
+  }
+}
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
