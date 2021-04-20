@@ -1,3 +1,52 @@
 .header {
   background-color: white;
+  &_figure {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 3px 3px 3px #c3bebe;
+    z-index: 2;
+    position: relative;
+  }
+  &_localisation {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(235, 235, 235);
+    color: rgb(60, 60, 60);
+    font-size: 1.2em;
+    text-align: center;
+    height: initial;
+
+    &_txt {
+      margin-left: 15px;
+      font-weight: bold;
+    }
+  }
+  &_explo {
+    width: 100%;
+    padding: 50px;
+    background-color: rgb(246, 246, 246);
+    text-align: center;
+    &_title {
+      font-weight: bold;
+      font-size: $font-size-title;
+    }
+    &_txt {
+      margin-top: 15px;
+    }
+    &_button {
+      color: white;
+      margin-top: 25px;
+      padding: 15px;
+      border-radius: 25px;
+      border: none;
+      font-size: 1.1em;
+      padding-left: 20px;
+      padding-right: 20px;
+      background: linear-gradient(165deg, #ff79da, #9356dc);
+    }
+  }
 }

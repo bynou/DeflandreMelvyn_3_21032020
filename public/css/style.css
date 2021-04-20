@@ -25,7 +25,6 @@
 .header {
   background-color: white;
 }
-
 .header_figure {
   width: 100%;
   margin: auto;
@@ -37,7 +36,6 @@
   z-index: 2;
   position: relative;
 }
-
 .header_localisation {
   width: 100%;
   padding: 15px;
@@ -51,7 +49,6 @@
   margin-left: 15px;
   font-weight: bold;
 }
-
 .header_explo {
   width: 100%;
   padding: 50px;
@@ -75,6 +72,38 @@
   padding-left: 20px;
   padding-right: 20px;
   background: linear-gradient(165deg, #ff79da, #9356dc);
+}
+
+.footer {
+  color: white;
+  background-color: #323232;
+}
+.footer_title {
+  font-family: "shrikhand", serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90%;
+  margin: auto;
+}
+.footer_ul {
+  list-style: none;
+  line-height: 1.8em;
+  width: 90%;
+  margin: auto;
+}
+.footer_ul_li_lien {
+  text-decoration: none;
+  color: white;
+}
+.footer_ul_li_lien:visited {
+  text-decoration: none;
+  color: white;
+}
+.footer_ul_li_lien_txt_1 {
+  margin-left: 15px;
+}
+.footer_ul_li_lien_txt_2 {
+  margin-left: 10px;
 }
 
 .nav {
@@ -203,41 +232,6 @@ main {
   margin: auto;
   width: 95%;
 }
-.restaurant_panneau_ref_heart {
-  position: relative;
-  width: 15px;
-  height: 15px;
-  background-color: #9356dc;
-  transform: rotate(45deg);
-  margin-top: 25px;
-  margin-right: 15px;
-}
-.restaurant_panneau_ref_heart::before {
-  position: absolute;
-  bottom: 0px;
-  left: -8px;
-  width: 15px;
-  height: 15px;
-  content: "";
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #9356dc;
-}
-.restaurant_panneau_ref_heart::after {
-  position: absolute;
-  top: -8px;
-  right: 0px;
-  width: 15px;
-  height: 15px;
-  content: "";
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #9356dc;
-}
 .restaurant_panneau_ref_txt {
   margin: 10px;
   margin-top: 15px;
@@ -270,82 +264,6 @@ main {
   height: 170px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
-}
-
-.footer {
-  color: white;
-  background-color: #323232;
-}
-.footer_title {
-  font-family: "shrikhand", serif;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 90%;
-  margin: auto;
-}
-.footer_ul {
-  list-style: none;
-  line-height: 1.8em;
-  width: 90%;
-  margin: auto;
-}
-.footer_ul_li_lien {
-  text-decoration: none;
-  color: white;
-}
-.footer_ul_li_lien:visited {
-  text-decoration: none;
-  color: white;
-}
-.footer_ul_li_lien_txt_1 {
-  margin-left: 15px;
-}
-.footer_ul_li_lien_txt_2 {
-  margin-left: 10px;
-}
-
-.icon_heart {
-  position: relative;
-  border: none;
-  background-color: transparent;
-}
-.icon_heart:hover .icon_heart_1 {
-  opacity: 0;
-  z-index: -1;
-}
-.icon_heart:hover .icon_heart_2 {
-  opacity: 1;
-  z-index: 1;
-}
-.icon_heart:focus {
-  outline: 0;
-}
-.icon_heart:focus .icon_heart_1 {
-  opacity: 0;
-  z-index: -1;
-}
-.icon_heart:focus .icon_heart_2 {
-  opacity: 1;
-  z-index: 1;
-}
-.icon_heart_1 {
-  font-size: 1.5em;
-  z-index: 1;
-}
-.icon_heart_2 {
-  font-size: 1.5em;
-  background: linear-gradient(0deg, #ff79da, #9356dc);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  position: absolute;
-  top: 22px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 5s;
 }
 
 .loader {
@@ -417,6 +335,16 @@ main {
     display: block;
   }
 }
+@-webkit-keyframes test {
+  from {
+    z-index: -1000;
+    display: none;
+  }
+  to {
+    z-index: 1000;
+    display: block;
+  }
+}
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -452,6 +380,49 @@ main {
     transform: rotate(360deg);
     /* Firefox 16+, IE 10+, Opera */
   }
+}
+.icon_heart {
+  position: relative;
+  border: none;
+  background-color: transparent;
+}
+.icon_heart:hover .icon_heart_1 {
+  opacity: 0;
+  z-index: -1;
+}
+.icon_heart:hover .icon_heart_2 {
+  opacity: 1;
+  z-index: 1;
+}
+.icon_heart:focus {
+  outline: 0;
+}
+.icon_heart:focus .icon_heart_1 {
+  opacity: 0;
+  z-index: -1;
+}
+.icon_heart:focus .icon_heart_2 {
+  opacity: 1;
+  z-index: 1;
+}
+.icon_heart_1 {
+  font-size: 1.5em;
+  z-index: 1;
+}
+.icon_heart_2 {
+  font-size: 1.5em;
+  background: linear-gradient(0deg, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 5s;
 }
 
 /*# sourceMappingURL=style.css.map */

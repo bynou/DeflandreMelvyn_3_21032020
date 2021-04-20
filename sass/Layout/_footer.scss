@@ -1,0 +1,31 @@
+.footer {
+  color: white;
+  background-color: rgb(50, 50, 50);
+  &_title {
+    font-family: "shrikhand", serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include width-marg;
+  }
+  &_ul {
+    list-style: none;
+    line-height: 1.8em;
+    @include width-marg;
+    &_li {
+      &_lien {
+        text-decoration: none;
+        color: white;
+        &:visited {
+          text-decoration: none;
+          color: white;
+        }
+        &_txt_1 {
+          margin-left: 15px;
+        }
+        &_txt_2 {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
