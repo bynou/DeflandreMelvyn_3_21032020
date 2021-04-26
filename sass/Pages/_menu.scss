@@ -1,0 +1,85 @@
+.main {
+  &_figure {
+    width: 100%;
+    height: 300px;
+
+    &_img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+  &_article {
+    width: 100%;
+    border-radius: 35px 35px 0 0;
+    margin-top: -35px;
+    position: relative;
+    background-color: rgb(246, 246, 246);
+
+    &_title {
+      font-family: "shrikhand", serif;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.5em;
+      width: 90%;
+      margin: auto;
+      padding-top: 35px;
+    }
+  }
+}
+.menu {
+  width: 90%;
+  margin: auto;
+  &_commander {
+    display: flex;
+    justify-content: center;
+    padding: 35px 0 50px 0;
+
+    &_button {
+      color: white;
+      margin-top: 25px;
+      padding: 15px 35px 15px 35px;
+      border-radius: 25px;
+      border: none;
+      font-size: 1.1em;
+      background: linear-gradient(165deg, #ff79da, #9356dc);
+    }
+  }
+  &_title {
+    font-size: 1.2em;
+    padding-top: 35px;
+    position: relative;
+    &_underline {
+      border: 2px solid $color-Tertiary;
+      border-radius: 2px;
+      width: 50px;
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+  }
+  &_plat {
+    &_cellule {
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 15px;
+      padding: 15px;
+      margin-bottom: 15px;
+      @include box-shadow;
+      &_txt {
+        line-height: 25px;
+        &_1 {
+          font-size: 1.1em;
+          font-weight: 600;
+        }
+        &_2 {
+          font-size: 0.9em;
+        }
+      }
+      &_prix {
+        font-weight: 600;
+        padding-top: 30px;
+      }
+    }
+  }
+}

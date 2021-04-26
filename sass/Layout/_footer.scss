@@ -12,20 +12,6 @@
     line-height: 1.8em;
     @include width-marg;
     &_li {
-      &_lien {
-        text-decoration: none;
-        color: white;
-        &:visited {
-          text-decoration: none;
-          color: white;
-        }
-        &_txt_1 {
-          margin-left: 15px;
-        }
-        &_txt_2 {
-          margin-left: 10px;
-        }
-      }
     }
   }
 }

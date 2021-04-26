@@ -1,0 +1,39 @@
+.header_figure_link {
+  text-decoration: none;
+  color: black;
+  &:visited {
+    text-decoration: none;
+    color: black;
+  }
+}
+.restaurant_panneau_ref_txt_map_link {
+  text-decoration: none;
+  color: black;
+  &:visited {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.footer_ul_li_lien {
+  text-decoration: none;
+  color: white;
+  &:visited {
+    text-decoration: none;
+    color: white;
+  }
+  &_txt_1 {
+    margin-left: 15px;
+  }
+  &_txt_2 {
+    margin-left: 10px;
+  }
+}
+.menu_commander_button_link {
+  text-decoration: none;
+  color: white;
+  &:visited {
+    text-decoration: none;
+    color: white;
+  }
+}
