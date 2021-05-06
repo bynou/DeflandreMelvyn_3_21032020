@@ -3,7 +3,7 @@
   opacity: 0;
 }
 
-@for $i from 1 through 10000 {
+@for $i from 1 through 10 {
   .delay_#{$i} {
     animation-delay: 1s * $i;
   }
