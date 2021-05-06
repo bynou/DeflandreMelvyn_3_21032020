@@ -40392,7 +40392,7 @@ main {
 }
 .menu_plat_cellule:hover ~ .menu_plat_validation i {
   display: flex;
-  animation: spinok 1s forwards;
+  animation: spinok 550ms forwards;
 }
 .menu_plat_cellule_txt {
   line-height: 25px;
@@ -40418,13 +40418,12 @@ main {
   background-color: #99e2d0;
   font-size: 1.8em;
   color: white;
-  transition: all 2s;
+  transition: all 400ms;
   border-radius: 0 15px 15px 0;
   margin-bottom: 15px;
 }
 .menu_plat_validation i {
   display: none;
-  transition: rotate 4s;
 }
 
 @keyframes spinok {
