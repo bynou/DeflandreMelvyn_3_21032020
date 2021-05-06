@@ -1,0 +1,31 @@
+@media screen and (min-width: 991.98px) {
+  /* Rédigez vos propriétés CSS ici */
+
+  .restaurant_container {
+    display: flex;
+  }
+  .restaurant_container_1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .restaurant_container_2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .footer_title {
+    display: flex;
+    justify-content: center;
+  }
+  .footer_ul {
+    width: 20%;
+  }
+  .footer_ul_li_3 {
+    margin-left: 30px;
+  }
+  .footer_ul_li_4 {
+    margin-left: 60px;
+  }
+}

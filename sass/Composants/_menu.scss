@@ -1,0 +1,15 @@
+.menu_plat_cellule {
+  -webkit-animation: menu 2s linear 1; /* Chrome, Opera 15+, Safari 5+ */
+  animation: menu 2s linear 1; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@keyframes test {
+  from {
+    z-index: -1000;
+    display: none;
+  }
+  to {
+    z-index: 1000;
+    display: block;
+  }
+}

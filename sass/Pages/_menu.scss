@@ -58,6 +58,8 @@
     }
   }
   &_plat {
+    display: flex;
+
     &_cellule {
       display: flex;
       justify-content: space-between;
@@ -65,9 +67,25 @@
       border-radius: 15px;
       padding: 15px;
       margin-bottom: 15px;
+
+      width: 100%;
       @include box-shadow;
+      &:hover {
+        animation: borderadius 2s forwards;
+      }
+      &:hover ~ .menu_plat_validation {
+        width: 15%;
+        i {
+          display: flex;
+
+          animation: spinok 1s forwards;
+        }
+      }
+
       &_txt {
         line-height: 25px;
+        text-overflow: ellipsis;
+        overflow: hidden;
         &_1 {
           font-size: 1.1em;
           font-weight: 600;
@@ -81,5 +99,41 @@
         padding-top: 30px;
       }
     }
+    &_validation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 0;
+      background-color: $color-Tertiary;
+      font-size: 1.8em;
+      color: white;
+      transition: all 2s;
+      border-radius: 0 15px 15px 0;
+      margin-bottom: 15px;
+
+      i {
+        display: none;
+        transition: rotate 4s;
+      }
+    }
+  }
+}
+@keyframes spinok {
+  from {
+    transform: rotate(150deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes borderadius {
+  0% {
+    border-radius: 15px 15px 15px 15px;
+  }
+  1% {
+    border-radius: 15px 0 0 15px;
+  }
+  100% {
+    border-radius: 15px 0 0 15px;
   }
 }

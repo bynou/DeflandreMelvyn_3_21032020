@@ -1,3 +1,4 @@
+@import "./Composants/fadeIn";
 @import "./Utils/variable";
 @import "./Utils/mixin";
 @import "./Base/typography";
@@ -8,3 +9,45 @@
 @import "./Pages/menu";
 @import "./Composants/spinner";
 @import "./Composants/heart_button";
+@import "./Composants/menu";
+
+@media screen and (min-width: 991.98px) {
+  /* Rédigez vos propriétés CSS ici */
+
+  .restaurant_container {
+    display: flex;
+  }
+  .restaurant_container_1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .restaurant_container_2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .footer_title {
+    display: flex;
+    justify-content: center;
+  }
+  .footer_ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu_container {
+    display: flex;
+  }
+  .menu_sous_container {
+    width: 50%;
+  }
+  .menu_commander_container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -52,16 +52,7 @@
     }
   }
 }
-@keyframes test {
-  from {
-    z-index: -1000;
-    display: none;
-  }
-  to {
-    z-index: 1000;
-    display: block;
-  }
-}
+
 @-webkit-keyframes test {
   from {
     z-index: -1000;
