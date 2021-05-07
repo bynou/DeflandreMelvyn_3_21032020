@@ -31,6 +31,7 @@
         z-index: 1;
         &_content {
           display: flex;
+          align-items: center;
 
           &_vignette {
             width: 20px;
