@@ -427,9 +427,10 @@ main {
 }
 .menu_plat_cellule:hover {
   animation: borderadius 2s forwards;
+  width: calc(100% - 40px);
 }
 .menu_plat_cellule:hover ~ .menu_plat_validation {
-  width: 15%;
+  width: 40px;
 }
 .menu_plat_cellule:hover ~ .menu_plat_validation i {
   display: flex;
@@ -439,13 +440,20 @@ main {
   line-height: 25px;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .menu_plat_cellule_txt_1 {
   font-size: 1.1em;
   font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu_plat_cellule_txt_2 {
   font-size: 0.9em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu_plat_cellule_prix {
   font-weight: 600;

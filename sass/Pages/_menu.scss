@@ -72,9 +72,10 @@
       @include box-shadow;
       &:hover {
         animation: borderadius 2s forwards;
+        width: calc(100% - 40px);
       }
       &:hover ~ .menu_plat_validation {
-        width: 15%;
+        width: 40px;
         i {
           display: flex;
 
@@ -86,12 +87,19 @@
         line-height: 25px;
         text-overflow: ellipsis;
         overflow: hidden;
+        white-space: nowrap;
         &_1 {
           font-size: 1.1em;
           font-weight: 600;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
         }
         &_2 {
           font-size: 0.9em;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
         }
       }
       &_prix {
