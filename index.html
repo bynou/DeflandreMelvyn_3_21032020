@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
-    <link rel="stylesheet"  href="public/css/style.css"/>
+    <link rel="stylesheet"  href="public/css/prefixed/style.css"/>
 
     <link rel="icon" type="image/png" sizes="16x3" href="images/logo/oh16x10.png">
     <title>myfood - Projet III </title>
@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     
 </head>
-
+<body>
 <header class="header">
     <figure class="header_figure">
         <img class="header_figure_img" src="images/logo/ohmyfood@2x.svg" alt="oh my food">
@@ -20,19 +20,19 @@
     <section class="header_explo">
         <h1 class="header_explo_title">Réservez le menu qui vous convient</h1>
         <p class="header_explo_txt">Découvrez des restaurants d'exception, selectionés par nos soins</p>
-        <button class="header_explo_button"><a class="menu_commander_button_link" href="#">Explorer nos restaurants</a></button>
+        <button class="header_explo_button">Explorer nos restaurants</button>
         
     </section>
     <nav class="nav">
-        <h1 class="nav_h1">Fonctionnement</h1>
+        <h2 class="nav_h1">Fonctionnement</h2>
         <ul class="nav_ul">
-            <li class="nav_ul_li"><button class="nav_ul_li_button"><div class="nav_ul_li_button_content"><div class="nav_ul_li_button_content_vignette">1</div><i class="fas fa-mobile-alt"></i><div class="nav_ul_li_button_content_vignette_txt">Choisissez un restaurant</div</button></li>
-            <li class="nav_ul_li"><button class="nav_ul_li_button"><div class="nav_ul_li_button_content"><div class="nav_ul_li_button_content_vignette">2</div><i class="fas fa-list-ul"></i><div class="nav_ul_li_button_content_vignette_txt">Composez votre menu</div></button></li>
-            <li class="nav_ul_li"><button class="nav_ul_li_button"><div class="nav_ul_li_button_content"><div class="nav_ul_li_button_content_vignette">3</div><i class="fas fa-store"></i><div class="nav_ul_li_button_content_vignette_txt">Dégustez au restaurant</div></button></li>
+            <li class="nav_ul_li"><button class="nav_ul_li_button"><span class="nav_ul_li_button_content"><span class="nav_ul_li_button_content_vignette">1</span><i class="fas fa-mobile-alt"></i><span class="nav_ul_li_button_content_vignette_txt">Choisissez un restaurant</span></span></button></li>
+            <li class="nav_ul_li"><button class="nav_ul_li_button"><span class="nav_ul_li_button_content"><span class="nav_ul_li_button_content_vignette">2</span><i class="fas fa-list-ul"></i><span class="nav_ul_li_button_content_vignette_txt">Composez votre menu</span></span></button></li>
+            <li class="nav_ul_li"><button class="nav_ul_li_button"><span class="nav_ul_li_button_content"><span class="nav_ul_li_button_content_vignette">3</span><i class="fas fa-store"></i><span class="nav_ul_li_button_content_vignette_txt">Dégustez au restaurant</span></span></button></li>
         </ul>
     </nav>
 </header>
-<body>
+
     
     <div class="loader">
         <div class="loader_anim"></div>
@@ -41,7 +41,7 @@
 <main class="restaurant">
 
 
-<h1 class="restaurant_title">Restaurants</h1>
+<h3 class="restaurant_title">Restaurants</h3>
 <div class="restaurant_container">
     <div class="restaurant_container_1">
 <div class="restaurant_panneau">   
@@ -51,7 +51,7 @@
     </div>
     <section class="restaurant_panneau_ref">
         <article class="restaurant_panneau_ref_txt"> 
-            <h2 class="restaurant_panneau_ref_txt_titre">La palette du gôut</h2>
+            <h4 class="restaurant_panneau_ref_txt_titre">La palette du gôut</h4>
             <span class="restaurant_panneau_ref_txt_map"><a class="restaurant_panneau_ref_txt_map_link" href="menu1.html">Ménilmontant</a></span>
         </article>
         <button class="index_icon_heart">
@@ -71,7 +71,7 @@
     </div>
     <section class="restaurant_panneau_ref">
         <article class="restaurant_panneau_ref_txt">
-            <h2 class="restaurant_panneau_ref_txt_titre">La note enchantée</h2>
+            <h4 class="restaurant_panneau_ref_txt_titre">La note enchantée</h4>
             <span class="restaurant_panneau_ref_txt_map"><a class="restaurant_panneau_ref_txt_map_link" href="menu2.html">Charonne</a></span>
         </article>
         
@@ -94,7 +94,7 @@
         </div>
     <section class="restaurant_panneau_ref">
         <article class="restaurant_panneau_ref_txt">
-            <h2 class="restaurant_panneau_ref_txt_titre">À la française</h2>
+            <h4 class="restaurant_panneau_ref_txt_titre">À la française</h4>
             <span class="restaurant_panneau_ref_txt_map"><a class="restaurant_panneau_ref_txt_map_link" href="menu3.html">Cité rouge</a></span>
         </article>
         <button class="index_icon_heart">
@@ -113,7 +113,7 @@
         </div>
     <section class="restaurant_panneau_ref">
         <article class="restaurant_panneau_ref_txt">
-            <h2 class="restaurant_panneau_ref_txt_titre">Le délice des sens</h2>
+            <h4 class="restaurant_panneau_ref_txt_titre">Le délice des sens</h4>
             <span class="restaurant_panneau_ref_txt_map"><a class="restaurant_panneau_ref_txt_map_link" href="menu4.html">Folie-Méricourt</a></span>
         </article>
         <button class="index_icon_heart">
@@ -138,7 +138,7 @@
 <footer class="footer">
     
     
-    <h1 class="footer_title">Ohmyfood</h1>
+    <h5 class="footer_title">Ohmyfood</h5>
     
     <ul class="footer_ul">
         <li class="footer_ul_li_1"><a class="footer_ul_li_lien" href="#"><i class="fas fa-utensils"></i><span class="footer_ul_li_lien_txt_1">Proposez un restaurant</span></a></li>
